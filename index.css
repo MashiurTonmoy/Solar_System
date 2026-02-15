@@ -1,0 +1,287 @@
+.banner {
+    margin-top: 100px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    top: 10%;
+    left: calc(50% - 125px); 
+    transform-style:preserve-3d;
+    transform: perspective(1000px);
+    animation: autorun 20s linear infinite;
+}
+@keyframes autorun{
+    from{
+        transform: perspective(1000px) rotateX(-17deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-17deg) rotateY(360deg);
+    }
+}
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--p) - 1) * 45 * 1deg)) 
+                translateZ(550px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
+}
+body{
+    background-image:url("Images/space.jpg");
+    text-align: center;
+}
+#sun{
+    
+   filter: drop-shadow(0 0 40px rgba(255,180,0,0.6));
+    width: 300px;
+    height: 300px;
+    z-index:-1;
+    margin: 150px  auto;
+    transform: rotateX(-20deg);
+
+   
+}
+h1 {
+  font-size: 5.5rem;
+  margin: 80px 0 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.6),
+    0 0 20px rgba(125,211,252,0.6);
+}
+#live{
+   
+    height: 400px;
+    margin: 50px auto;
+    display: block;
+     background: linear-gradient(
+    145deg,
+    rgba(0,0,0,0.85),
+    rgba(20,20,40,0.9)
+  );
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    font-size: 25px;
+}
+#live #data{
+    border: 1px solid white;
+    height: 280px;
+    overflow-y: scroll;
+    width: 90%;
+    margin: 0 auto;
+    animation: scroll  linear;
+    animation-timeline:scroll(); 
+  
+}
+@keyframes scroll {
+    0% { 
+    transform: scale(.7);
+    opacity: 0; }
+    100% { 
+    transform: scale(1);
+    opacity: 1; }
+}
+@keyframes move {
+    0% { 
+    transform: translateX(-200px);
+    opacity: 0.5; }
+    100% { 
+    transform: translateX(0px);
+    opacity: 1; }
+}
+
+.wiki-box {
+  width: 90%;
+ 
+  margin: 25px auto;
+  padding: 25px;
+  background: linear-gradient(
+    145deg,
+    rgba(0,0,0,0.85),
+    rgba(20,20,40,0.9)
+  );
+   color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.6),
+    0 0 20px rgba(125,211,252,0.6);
+    font-size: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+
+}
+.wiki-box summary::-webkit-details-marker {
+   
+  display: none;
+}
+
+.wiki-box summary {
+    animation: move linear;
+  animation-timeline: scroll();
+  list-style: none;
+}
+
+.arrow {
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+details[open] .arrow {
+  transform: rotate(90deg);
+}
+
+.wiki-box small {
+  display: block;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+.footer {
+  height: 150px;
+  background: radial-gradient(circle at top, #0b1d2a, #020617);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #cbd5f5;
+  font-family: "Poppins", sans-serif;
+  margin-top: 80px;
+}
+
+.footer-line {
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #4f8cff,
+    #7dd3fc,
+    #4f8cff,
+    transparent
+  );
+  margin-bottom: 25px;
+  box-shadow: 0 0 12px rgba(125, 211, 252, 0.6);
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+#videos {
+  margin: 0 auto;
+  width: 90%;
+  padding: 80px 20px;
+   background: linear-gradient(
+    145deg,
+    rgba(0,0,0,0.85),
+    rgba(20,20,40,0.9)
+  );
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+#videos h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px rgba(125,211,252,0.6);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: auto;
+}
+
+.video-card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  transition: transform 0.4s, box-shadow 0.4s;
+
+}
+
+.video-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 35px rgba(125,211,252,0.7);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.video-card p {
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+/* Add Video Form */
+.add-video-box {
+  width: 90%;
+  margin: 70px auto 0;
+  padding: 30px;
+  background: linear-gradient(145deg, rgba(0,0,0,0.85), rgba(20,20,40,0.9));
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  animation: scroll  linear;
+  animation-timeline:scroll(); 
+}
+
+.add-video-box h3 {
+  margin-bottom: 20px;
+}
+
+.add-video-box input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.add-video-box button {
+  padding: 14px 30px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #4f8cff, #7dd3fc);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.add-video-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(125,211,252,0.8);
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Itim&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <h1> Explore Our Solar System</h1>
+     <div class="banner">
+         <img src="./Images/sun.png" id="sun">
+        <div class="slider" style="--q:8">
+            <div class="item" style="--p:1"><img src="./Images/earth.png"></div>
+            <div class="item" style="--p:2"><img src="./Images/mars.png"></div>
+            <div class="item" style="--p:3"><img src="./Images/jupiter.png"></div>
+            <div class="item" style="--p:4"><img src="./Images/jupiter1.png"></div>
+            <div class="item" style="--p:5"><img src="./Images/urenus.png"></div>
+            <div class="item" style="--p:6"><img src="./Images/neptune.png"></div>
+            <div class="item" style="--p:7"><img src="./Images/venus.png"></div>
+            <div class="item" style="--p:8"><img src="./Images/mercury.png"></div>
+        </div>
+     </div>
+    <div id="live">
+        <h3>Live Updates</h3>
+        <div id="data">
+    </div>
+    </div>
+ <section id="planets">
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Mercury
+    </summary>
+    <p>
+      Mercury is the smallest planet and closest to the Sun.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Venus
+    </summary>
+    <p>
+      Venus is the hottest planet due to its thick atmosphere.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Earth
+    </summary>
+    <p>
+      Earth is the only known planet that supports life.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Mars
+    </summary>
+    <p>
+      Mars is known as the Red Planet and has two moons: Phobos and Deimos.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Jupiter
+    </summary>
+    <p>
+      Jupiter is the largest planet and has a massive storm called the Great Red Spot.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Saturn
+    </summary>
+    <p>
+      Saturn is famous for its beautiful ring system.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Uranus
+    </summary>
+    <p>
+      Uranus rotates on its side and has a blue-green color due to methane gas.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+  <details class="wiki-box">
+    <summary>
+      <span class="arrow">▶</span> Neptune
+    </summary>
+    <p>
+      Neptune is the farthest planet and has the strongest winds in the solar system.
+    </p>
+    <small><i>Read and post about this planet if you want to modify you can</i></small>
+  </details>
+
+</section>
+<section id="videos">
+  <h2>📺 Solar System Learning Videos</h2>
+
+  
+  <div class="video-grid" id="videoGrid"></div>
+
+
+  <div class="add-video-box">
+    <h3>Add Your Own Video</h3>
+    <input type="text" id="videoTitle" placeholder="Video title">
+    <input type="text" id="videoURL" placeholder="YouTube embed link (https://www.youtube.com/embed/...)">
+    <button onclick="addVideo()">Add Video</button>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-line"></div>
+
+  <div class="footer-content">
+    <p class="footer-title">Exploring Beyond the Stars</p>
+    <p class="footer-text">
+      Crafted with curiosity, code, and cosmic inspiration.
+    </p>
+  </div>
+</footer>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
