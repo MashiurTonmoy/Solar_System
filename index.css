@@ -64,9 +64,9 @@ h1 {
     0 0 20px rgba(125,211,252,0.6);
 }
 #live{
+    width: 97%;
+    height: 100vh ;
    
-    height: 400px;
-    margin: 50px auto;
     display: block;
      background: linear-gradient(
     145deg,
@@ -78,24 +78,48 @@ h1 {
     padding: 10px;
     font-size: 25px;
 }
-#live #data{
-    border: 1px solid white;
-    height: 280px;
-    overflow-y: scroll;
-    width: 90%;
-    margin: 0 auto;
-    animation: scroll  linear;
-    animation-timeline:scroll(); 
+#live #data {
+  position: relative;
+  height: 80%;
+  width: 95%;
+  margin: 0 auto;
+
+  border: 2px solid;
   
+  /* glowing gradient effect */
+  border-image: linear-gradient(270deg, #00f, rgb(24, 139, 134), #00f) 1;
+  animation: glowBorder 1.5s linear infinite;
+  border-radius: 15px;
+
+  /* optional inner shadow for extra vibe */
+  box-shadow: 0 0 20px rgba(0,0,255,0.6), 0 0 20px rgba(242, 239, 239, 0.6);
 }
-@keyframes scroll {
-    0% { 
-    transform: scale(.7);
-    opacity: 0; }
-    100% { 
-    transform: scale(1);
-    opacity: 1; }
+
+/* animate the border gradient */
+@keyframes glowBorder {
+  0% {
+    border-image: linear-gradient(0deg, #00f, rgb(47, 185, 180), #00f) 1;
+  }
+  50% {
+    border-image: linear-gradient(180deg, rgb(37, 181, 176), #00f, rgb(52, 207, 189)) 1;
+  }
+  100% {
+    border-image: linear-gradient(360deg, #00f, rgb(42, 152, 139), #00f) 1;
+  }
 }
+
+
+
+#live #data iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
 @keyframes move {
     0% { 
     transform: translateX(-200px);
@@ -285,3 +309,4 @@ details[open] .arrow {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(125,211,252,0.8);
 }
+
