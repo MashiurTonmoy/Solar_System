@@ -78,13 +78,10 @@ h1 {
     padding: 10px;
     font-size: 25px;
 }
-#live #data {
+#live #fir, #live #sec {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90%;
+ 
+  height: 45%;
   width: 95%;
   margin: 0 auto;
 
@@ -97,6 +94,11 @@ h1 {
 
   /* optional inner shadow for extra vibe */
   box-shadow: 0 0 20px rgba(0,0,255,0.6), 0 0 20px rgba(242, 239, 239, 0.6);
+}
+#live #fir iframe, #live #sec iframe {
+  border: none;
+ height: 100%;
+ width: 100%;
 }
 
 /* animate the border gradient */
